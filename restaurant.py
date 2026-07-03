@@ -1,4 +1,6 @@
 #restro bill printing
+from datetime import datetime
+
 print('''
     _________________________________
             RESTAURANTS LIST
@@ -49,22 +51,28 @@ match ch:
                             print('PLEASE ADD AT LEAST ONE ITEM.')
                             continue
                         name=input('ENTER THE CUSTOMER NAME:-')
-                        mob=int(input('ENTER THE CUSTOMER MOB NUM:-'))    
+                        mob=int(input('ENTER THE CUSTOMER MOB NUM:-'))
+
+                        now = datetime.now()
+                        date = now.strftime("%d-%m-%Y")
+                        time = now.strftime("%I:%M %p")
                         print('________________________________')
                         print('             BILL               ')
                         print('________________________________')
                         print(f'''NAME  :-    {name}''')
                         print(f'''MOB NUM:-   {mob}''')
-                        print('_________________________________')
+                        print(f'''DATE :-     {date} ''')
+                        print(f'''TIME :-     {time}''')
+                        print('''________________________________''')
                         if qty1>0:
                             print(f'''RAJ KACHORI      X{qty1}    {d1}''')
                         if qty2>0:
                             print(f'''CHOLA BHATURA    X{qty2}    {d2}''')
                         if qty3>0:
                             print(f'''SAMOSA           X{qty3}    {d3}''')
-                        print('________________________________')
+                        print('___________________________________________')
                         print(f'''TOTAL BILL :-           {total_bill}''')
-                        print('______________________________________')
+                        print('__________________________________________')
 
                         import random
                         import math
@@ -217,11 +225,17 @@ match ch:
                             continue
                         name=input('ENTER THE CUSTOMER NAME:-')
                         mob=int(input('ENTER THE CUSTOMER MOB NUM:-'))
+
+                        now = datetime.now()
+                        date = now.strftime("%d-%m-%Y")
+                        time = now.strftime("%I:%M %p")
                         print('________________________________')
                         print('             BILL               ')
                         print('________________________________')
                         print(f'''NAME  :-    {name}''')
                         print(f'''MOB NUM:-   {mob}''')
+                        print(f'''DATE :-     {date}''')
+                        print(f'''TIME:-      {time}''')
                         print('_________________________________')
                         if qty1>0:
                             print(f'''MARGHERITA PIZZA     X{qty1}    {d1}''')
@@ -384,11 +398,17 @@ match ch:
                             continue
                         name=input('ENTER THE CUSTOMER NAME:-')
                         mob=int(input('ENTER THE CUSTOMER MOB NUM:-'))
+
+                        now = datetime.now()
+                        date = now.strftime("%d-%m-%Y")
+                        time = now.strftime("%I:%M %p")
                         print('________________________________')
                         print('             BILL               ')
                         print('________________________________')
                         print(f'''NAME  :-    {name}''')
                         print(f'''MOB NUM:-   {mob}''')
+                        print(f'''DATE :-     {date}''')
+                        print(f'''TIME :-     {time}''')
                         print('_________________________________')
                         if qty1>0:
                             print(f'''NUTELLA BROWNIE     X{qty1}    {d1}''')
