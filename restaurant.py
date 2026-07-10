@@ -46,7 +46,10 @@ match ch:
                         qty3=int(input('ENTER THE QUANTITY:-'))
                         d3=price[2] * qty3
                     case 3:
-                        total_bill= qty1 * 180+ qty2 *200+ qty3*90
+                        total_bill = qty1 * 180 + qty2 * 200 + qty3 * 90
+
+                        gst = total_bill * 0.05
+                        final_bill = total_bill + gst
                         if total_bill==0:
                             print('PLEASE ADD AT LEAST ONE ITEM.')
                             continue
@@ -71,8 +74,12 @@ match ch:
                         if qty3>0:
                             print(f'''SAMOSA           X{qty3}    {d3}''')
                         print('___________________________________________')
-                        print(f'''TOTAL BILL :-           {total_bill}''')
+                        print(f'''SUB TOTAL  :-         {total_bill}''')
                         print('__________________________________________')
+                        print(f'''gst (5%) :-             {gst}''' )
+                        print(f'____________________________________')
+                        print(f''' FINAL BILL :-           {final_bill}''')
+                        print(f'_______________________________________')
 
                         import random
                         import math
@@ -96,11 +103,11 @@ match ch:
                                     case 1:
                                         cash=int(input('ENTER THE CASH AMOUNT:-'))
         
-                                        if cash > total_bill:
-                                            more_cash= cash-total_bill
+                                        if cash > final_bill:
+                                            more_cash= cash-final_bill
                                             print('___________________________________')
                                             print('PAYMENT SUCCESSFUL!')
-                                            print(f'''{cash}    - {total_bill} = {more_cash}/-''')
+                                            print(f'''{cash}    - {final_bill} = {more_cash}/-''')
                                             print('____________________________________')
                                             print('ORDER CONFIRMED!')
                                             print(f'''CHANGE RETURN  -->  {more_cash}/-''')
@@ -109,19 +116,19 @@ match ch:
                                             print('_________________________________')
                                             break
                                             
-                                        if cash < total_bill:
-                                            less_cash= total_bill - cash
+                                        if cash < final_bill:
+                                            less_cash= final_bill- cash
                                             print('_____________________________________')
                                             print('INSUFFICIENT AMOUNT!')
                                             print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                             print('________________________________________')
                                             extra = int(input("ENTER REMAINING CASH: "))
                                             cash=cash+extra
-                                            if cash > total_bill:
-                                                nbill= cash - total_bill
+                                            if cash > final_bill:
+                                                nbill= cash - final_bill
                                                 print('___________________________________')
                                                 print('PAYMENT SUCCESSFUL!')
-                                                print(f'''{cash}    - {total_bill} = {nbill}/-''')
+                                                print(f'''{cash}    - {final_bill} = {nbill}/-''')
                                                 print('____________________________________')
                                                 print('ORDER CONFIRMED!')
                                                 print(f'''CHANGE RETURN  -->  {nbill}/-''')
@@ -129,12 +136,12 @@ match ch:
                                                 print('THANK YOU FOR VISITING HALDIRAM!')
                                                 print('_____________________________________')
                                                 break
-                                            if cash< total_bill:
+                                            if cash< final_bill:
                                                 print('_____________________________________')
                                                 print('INSUFFICIENT AMOUNT!')
                                                 print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                                 print('________________________________________')
-                                            if cash==total_bill:
+                                            if cash==final_bill:
                                                 print('_________________________')
                                                 print('PAYMENT IS SUCCESSFUL!')
                                                 print('ORDER CONFIRMED!')
@@ -142,7 +149,7 @@ match ch:
                                                 print('THANK YOU FOR VISITING HALDIRAM!')
                                                 print('__________________________')
                                                 break
-                                        if cash==total_bill:
+                                        if cash==final_bill:
                                             print('_________________________')
                                             print('PAYMENT IS SUCCESSFUL!')
                                             print('ORDER CONFIRMED!')
@@ -173,7 +180,7 @@ match ch:
                                     case 3:
                                         uid=input('ENTER THE UPI ID:-')
                                         pin=input('ENTER THE PIN :-')
-                                        print(f'''{total_bill}/-  PAID!''')
+                                        print(f'''{final_bill}/-  PAID!''')
                                         print('____________________________________')
                                         print('PAYMENT SUCCESSFULLY PAID !')
                                         print('____________________________________')
@@ -219,7 +226,10 @@ match ch:
                         qty3=int(input('ENTER THE QUANTITY:- '))
                         d3=price[2] * qty3
                     case 3:
-                        total_bill= qty1 * 150+ qty2 *200+ qty3*170
+                        total_bill = qty1 * 150 + qty2 * 200 + qty3 * 170
+
+                        gst = total_bill * 0.05
+                        final_bill = total_bill + gst
                         if total_bill==0:
                             print('PLEASE ADD AT LEAST ONE ITEM.')
                             continue
@@ -244,8 +254,12 @@ match ch:
                         if qty3>0:
                             print(f'''GRILLED SANDWICH      X{qty3}    {d3}''')
                         print('________________________________')
-                        print(f'''TOTAL BILL :-           {total_bill}''')
+                        print(f'''SUB BILL :-           {total_bill}''')
                         print('______________________________________')
+                        print(f'''gst (5%) :-             {gst}''' )
+                        print(f'____________________________________')
+                        print(f''' FINAL BILL :-           {final_bill}''')
+                        print(f'_______________________________________')
                         
                         import random
                         import math
@@ -269,11 +283,11 @@ match ch:
                                     case 1:
                                         cash=int(input('ENTER THE CASH AMOUNT:-'))
         
-                                        if cash > total_bill:
-                                            more_cash= cash-total_bill
+                                        if cash > final_bill:
+                                            more_cash= cash-final_bill
                                             print('___________________________________')
                                             print('PAYMENT SUCCESSFUL!')
-                                            print(f'''{cash}    - {total_bill} = {more_cash}/-''')
+                                            print(f'''{cash}    - {final_bill} = {more_cash}/-''')
                                             print('____________________________________')
                                             print('ORDER CONFIRMED!')
                                             print(f'''CHANGE RETURN  -->  {more_cash}/-''')
@@ -282,19 +296,19 @@ match ch:
                                             print('_________________________________')
                                             break
                                             
-                                        if cash < total_bill:
-                                            less_cash= total_bill - cash
+                                        if cash < final_bill:
+                                            less_cash= final_bill - cash
                                             print('_____________________________________')
                                             print('INSUFFICIENT AMOUNT!')
                                             print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                             print('________________________________________')
                                             extra = int(input("ENTER REMAINING CASH: "))
                                             cash=cash+extra
-                                            if cash > total_bill:
-                                                nbill= cash - total_bill
+                                            if cash >final_bill:
+                                                nbill= cash - final_bill
                                                 print('___________________________________')
                                                 print('PAYMENT SUCCESSFUL!')
-                                                print(f'''{cash}    - {total_bill} = {nbill}/-''')
+                                                print(f'''{cash}    - {final_bill} = {nbill}/-''')
                                                 print('____________________________________')
                                                 print('ORDER CONFIRMED!')
                                                 print(f'''CHANGE RETURN  -->  {nbill}/-''')
@@ -302,12 +316,12 @@ match ch:
                                                 print('THANK YOU FOR VISITING FUEL STATION!')
                                                 print('_____________________________________')
                                                 break
-                                            if cash< total_bill:
+                                            if cash< final_bill:
                                                 print('_____________________________________')
                                                 print('INSUFFICIENT AMOUNT!')
                                                 print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                                 print('________________________________________')
-                                            if cash==total_bill:
+                                            if cash==final_bill:
                                                 print('_________________________')
                                                 print('PAYMENT IS SUCCESSFUL!')
                                                 print('ORDER CONFIRMED!')
@@ -315,7 +329,7 @@ match ch:
                                                 print('THANK YOU FOR VISITING FUEL STATION!')
                                                 print('__________________________')
                                                 break
-                                        if cash==total_bill:
+                                        if cash==final_bill:
                                             print('_________________________')
                                             print('PAYMENT IS SUCCESSFUL!')
                                             print('ORDER CONFIRMED!')
@@ -346,7 +360,7 @@ match ch:
                                     case 3:
                                         uid=input('ENTER THE UPI ID:-')
                                         pin=input('ENTER THE PIN :-')
-                                        print(f'''{total_bill}/-  PAID!''')
+                                        print(f'''{final_bill}/-  PAID!''')
                                         print('____________________________________')
                                         print('PAYMENT SUCCESSFULLY PAID !')
                                         print('____________________________________')
@@ -392,7 +406,10 @@ match ch:
                         qty3=int(input('ENTER THE QUANTITY:- '))
                         d3= price[2] *qty3
                     case 3:
-                        total_bill= qty1 * 160+ qty2 *200+ qty3*130
+                        total_bill = qty1 * 160 + qty2 * 200 + qty3 * 130
+
+                        gst = total_bill * 0.05
+                        final_bill = total_bill + gst
                         if total_bill==0:
                             print('PLEASE ADD AT LEAST ONE ITEM.')
                             continue
@@ -417,8 +434,12 @@ match ch:
                         if qty3>0:
                             print(f'''NUTELLA HAZELNUTS   X{qty3}    {d3}''')
                         print('________________________________')
-                        print(f'''TOTAL BILL :-           {total_bill}''')
+                        print(f'''SUB BILL :-           {total_bill}''')
                         print('______________________________________')
+                        print(f'''gst (5%) :-             {gst}''' )
+                        print(f'____________________________________')
+                        print(f''' FINAL BILL :-           {final_bill}''')
+                        print(f'_______________________________________')
                         
                         import random
                         import math
@@ -442,11 +463,11 @@ match ch:
                                     case 1:
                                         cash=int(input('ENTER THE CASH AMOUNT:-'))
         
-                                        if cash > total_bill:
-                                            more_cash= cash-total_bill
+                                        if cash > final_bill:
+                                            more_cash= cash-final_bill
                                             print('___________________________________')
                                             print('PAYMENT SUCCESSFUL!')
-                                            print(f'''{cash}    - {total_bill} = {more_cash}/-''')
+                                            print(f'''{cash}    - {final_bill} = {more_cash}/-''')
                                             print('____________________________________')
                                             print('ORDER CONFIRMED!')
                                             print(f'''CHANGE RETURN  -->  {more_cash}/-''')
@@ -455,19 +476,19 @@ match ch:
                                             print('_________________________________')
                                             break
                                             
-                                        if cash < total_bill:
-                                            less_cash= total_bill - cash
+                                        if cash < final_bill:
+                                            less_cash= final_bill - cash
                                             print('_____________________________________')
                                             print('INSUFFICIENT AMOUNT!')
                                             print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                             print('________________________________________')
                                             extra = int(input("ENTER REMAINING CASH: "))
                                             cash=cash+extra
-                                            if cash > total_bill:
-                                                nbill= cash - total_bill
+                                            if cash > final_bill:
+                                                nbill= cash - final_bill
                                                 print('___________________________________')
                                                 print('PAYMENT SUCCESSFUL!')
-                                                print(f'''{cash}    - {total_bill} = {nbill}/-''')
+                                                print(f'''{cash}    - {final_bill} = {nbill}/-''')
                                                 print('____________________________________')
                                                 print('ORDER CONFIRMED!')
                                                 print(f'''CHANGE RETURN  -->  {nbill}/-''')
@@ -475,12 +496,12 @@ match ch:
                                                 print('THANK YOU FOR VISITING FRULLATO!')
                                                 print('_____________________________________')
                                                 break
-                                            if cash< total_bill:
+                                            if cash< final_bill:
                                                 print('_____________________________________')
                                                 print('INSUFFICIENT AMOUNT!')
                                                 print(f'''REMAINING AMOUNT  --> {less_cash}/-''')
                                                 print('________________________________________')
-                                            if cash==total_bill:
+                                            if cash==final_bill:
                                                 print('_________________________')
                                                 print('PAYMENT IS SUCCESSFUL!')
                                                 print('ORDER CONFIRMED!')
@@ -488,7 +509,7 @@ match ch:
                                                 print('THANK YOU FOR VISITING FRULLATO!')
                                                 print('__________________________')
                                                 break
-                                        if cash==total_bill:
+                                        if cash==final_bill:
                                             print('_________________________')
                                             print('PAYMENT IS SUCCESSFUL!')
                                             print('ORDER CONFIRMED!')
@@ -519,7 +540,7 @@ match ch:
                                     case 3:
                                         uid=input('ENTER THE UPI ID:-')
                                         pin=input('ENTER THE PIN :-')
-                                        print(f'''{total_bill}/-  PAID!''')
+                                        print(f'''{final_bill}/-  PAID!''')
                                         print('____________________________________')
                                         print('PAYMENT SUCCESSFULLY PAID !')
                                         print('____________________________________')
